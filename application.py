@@ -4,7 +4,7 @@ import logging
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flask import Flask, request
+from flask import Flask, request, render_template
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.events import EVENT_JOB_EXECUTED
 from helpers import request_processing, analyze_text, user_subscription, get_today_events, NewBot, queued_message
@@ -68,10 +68,10 @@ def send_subject_list(rec_id):
 
 
 @app.route('/', methods=['GET', 'POST'])
-def receive_message():
+def index():
 
     if request.method == 'GET':
-        return 'Welcome to the chat bot'
+        return render_template("index.html")
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def recieve_webhook():
