@@ -9,7 +9,8 @@ and sending the messages to the subscribed users.
 # TODO
 * A default homepage for the chatbot
 * A dashboard to make it easy to add and update the data stored in the DB
-
+* Refactoring the code and clean code structure
+* Write tests
 
 
 
