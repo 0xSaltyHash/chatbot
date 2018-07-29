@@ -1,0 +1,5 @@
+*.log
+*.pyc
+*.lock
+.env
+.db
