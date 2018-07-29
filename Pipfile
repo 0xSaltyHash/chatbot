@@ -26,6 +26,7 @@ Flask-SQLAlchemy = "==2.2"
 MarkupSafe = "==1.0"
 SQLAlchemy = "==1.2.10"
 Werkzeug = "==0.14.1"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.6"
