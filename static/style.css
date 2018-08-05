@@ -2,6 +2,8 @@ body {
 	direction: rtl;
 	background-color: #0084FF;
 	margin: 0;
+	padding: 0;
+	height: 100%;
 	font-family: Changa;
 }
 
@@ -21,7 +23,7 @@ body {
 
 @keyframes btn {
 	0% {opacity: 0;}
-	25% {opacity: 0;}
+	25% {opacity: 0.3;}
 	50% {opacity: 0.5;}
 	100% {opacity: 1;}
 }
@@ -49,6 +51,7 @@ nav {
 	margin: 0 0 0 0;
     padding: 0;	
 	display: block;
+	width: 100%;
 }	
 li {
 	float: right;
@@ -88,4 +91,36 @@ li a:hover {
 	animation-name: btn;
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
+}
+
+footer {
+	position: absolute;
+	bottom:0px;
+	width: 100%;
+	height: 90px;
+	background-color: #134e82;
+	overflow: hidden;
+}
+
+.fa {
+	position: relative;
+	left: 48%;
+    padding: 20px 2% 15px 0;
+    font-size: 1.9em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#sponsor {
+	color: #fff;
+	text-align: center;
+	font-size: 1.1em;
+	line-height: 1.9ex;
+}
+
+#sponsor-link {
+	text-decoration: underline;
+}
+#sponsor-link:hover {
+	color: #5ff
 }
