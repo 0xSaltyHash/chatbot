@@ -29,7 +29,7 @@ def job_listener(event):
         MESSAGE_QUEUE = event.retval
         print(MESSAGE_QUEUE)
         if len(MESSAGE_QUEUE) != 0:
-       	    scheduler.add_job(queued_message, 'interval', [scheduler, MESSAGE_QUEUE, bot, bio_temp], timezone='UTC', seconds=20, id="message_queue")
+            scheduler.add_job(queued_message, 'interval', [scheduler, MESSAGE_QUEUE, bot, bio_temp], timezone='UTC', seconds=20, id="message_queue")
             return "message queue started"
     elif event.job_id == 'message_queue':
         return 1
@@ -80,9 +80,10 @@ def recieve_webhook():
         print(output)
         message_recieved = request_processing(output['entry'])
         psid = message_recieved.get('uid', None)
+        print(psid)
         if psid == None:
             return "Not valid webhook"
-		elif message_recieved.get('payload') == None:
+        elif message_recieved.get('payload') == None:
             response = analyze_text(message_recieved['text'])
             if response == 0:
                 send_subject_list(psid)
