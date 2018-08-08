@@ -77,10 +77,12 @@ def index():
 def recieve_webhook():
     if request.method == 'POST':
         output = request.get_json()
+		print(output)
         message_recieved = request_processing(output['entry'])
-        psid = message_recieved['uid']
-
-        if message_recieved.get('payload') == None:
+        psid = message_recieved.get('uid', None)
+        if psid == None:
+			return "Not valid webhook"
+		elif message_recieved.get('payload') == None:
             response = analyze_text(message_recieved['text'])
             if response == 0:
                 send_subject_list(psid)
