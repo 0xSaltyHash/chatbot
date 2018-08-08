@@ -5,8 +5,10 @@ body {
 	padding: 0;
 	height: 100%;
 	font-family: Changa;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.8vmax;
 }
-
 @keyframes messages {
     0% {
 		opacity: 0;
@@ -15,7 +17,7 @@ body {
 	}
     100% {
 		opacity: 1;
-		margin-top: 60px;
+		margin-top: 0.8em;
 		margin-bottom: 0;
 	}
 }
@@ -23,11 +25,28 @@ body {
 
 @keyframes btn {
 	0% {opacity: 0;}
-	25% {opacity: 0.3;}
-	50% {opacity: 0.5;}
 	100% {opacity: 1;}
 }
+nav {
+	background-color: #134e82;
+	margin: 0 0 1.5em 0;
+    padding: 0;	
+	display: flex;
+	width: 100%;
+}	
 
+nav ul li{
+	display: flex;
+	color: #fff;
+}
+li#brand{
+	font-size: 1.2em;
+	margin: 0.5em 0.5em 0 0.5em;
+}
+
+li#brand p:hover{
+	cursor: default;
+}
 a {
 	text-decoration: none;
 	color: #fff;
@@ -40,30 +59,20 @@ a:hover {
 
 
 ul {
+	display: flex;
 	list-style: none;
 	margin: 0;
     padding: 0;	
 	overflow: hidden;
-	
-}
-nav {
-	background-color: #134e82;
-	margin: 0 0 0 0;
-    padding: 0;	
-	display: block;
-	width: 100%;
-}	
-li {
-	float: right;
 }
 
+
 li a {
-    display: block;
-    padding: 20px 16px;
     background-color: #134e82;
 	text-decoration: none;
-	color: white;
 	text-align: center;
+	padding: 1em 1em;
+	font-size: 0.9em;
 }
 
 li a:hover {
@@ -77,8 +86,11 @@ li a:hover {
 }
 
 .messages {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.7em;
 	color: #fff;
 	font-weight: bold;
 	animation-name: messages;
@@ -87,7 +99,7 @@ li a:hover {
 }
 
 .bot-link {
-	margin: 25px;
+	margin-top: 0.5em;
 	animation-name: btn;
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
@@ -101,23 +113,20 @@ footer {
 	background-color: #134e82;
 	overflow: hidden;
 }
-
-.fa {
-	position: relative;
-	left: 48%;
-    padding: 20px 2% 15px 0;
-    font-size: 1.9em;
-    text-align: center;
-    text-decoration: none;
-}
-
 #sponsor {
 	color: #fff;
 	text-align: center;
-	font-size: 1.1em;
-	line-height: 1.9ex;
+	font-size: 0.8em;
+	line-height: 1ex;
 }
-
+.fa {
+	position: relative;
+	left: 48%;
+    padding: 0.7em 0.5em 0.6em 0;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+}
 #sponsor-link {
 	text-decoration: underline;
 }
