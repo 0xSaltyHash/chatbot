@@ -79,7 +79,10 @@ def recieve_webhook():
         output = request.get_json()
         print(output)
         message_recieved = request_processing(output['entry'])
-        psid = message_recieved.get('uid', None)
+        try:
+            psid = message_recieved.get('uid', None)
+        except AttributeError:
+            return "Unknown Webhook"
         print(psid)
         if psid == None:
             return "Not valid webhook"
