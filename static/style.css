@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-family: Changa;
+	font-family: "Changa";
 	display: flex;
 	flex-direction: column;
 	font-size: 1.8vmax;

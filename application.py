@@ -67,7 +67,7 @@ def send_subject_list(rec_id):
 
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET')
 def index():
 
     if request.method == 'GET':
