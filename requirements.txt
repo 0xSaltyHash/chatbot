@@ -14,7 +14,7 @@ pymessenger==0.0.7.0
 python-dotenv==0.8.2
 pytz==2018.5
 requests-toolbelt==0.8.0
-requests==2.19.1
+requests=>2.20.0
 six==1.11.0
 sqlalchemy==1.2.10
 tzlocal==1.5.1
