@@ -5,6 +5,7 @@ from pymessenger.bot import Bot
 class NewBot(Bot):
     """
         this is a child of Bot class from pymessenger module
+        it is an expansion to add FB Messenger quick replies 
     """
     def send_quick_replies(self, recipient_id, text, quick_replies):
         """
@@ -17,6 +18,9 @@ class NewBot(Bot):
 
 
 def user_subscription(db_obj, psid, sub_id):
+    """
+        Function to add new user and his preferences to the DB, it records users facebook id and requested subject and a unique subject id
+    """
     db_obj.execute("INSERT OR IGNORE INTO user_preference (fb_id, subject) VALUES (:id, :subid)", {"id": int(psid), "subid": int(sub_id)})
     db_obj.commit()
 
@@ -61,6 +65,8 @@ def request_processing(response_events):
 def analyze_text(received_text):
     """
         A function that will analyze the user's text message and then will decied which response is appropriate
+
+        TODO: add more response varaities
     """
     default_response = 'مرحبا، لطلب قائمة المواد قم بإرسال "إشتراك" أو قم بإرسال مرحبًا '
 

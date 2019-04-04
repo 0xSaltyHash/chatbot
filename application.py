@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # a facebook messenger chat bot
+
 import logging
 import os
 from sqlalchemy import create_engine
@@ -58,9 +59,9 @@ def send_subject_list(rec_id):
         Sends subjects list to the user of rec_id as a quick replies buttons
     """
     quick_reply = [{"content_type": "text", "title": "فيزياء", "payload": 1},
-    {"content_type": "text", "title": "كيمياء", "payload": 2},
-    {"content_type": "text", "title": "أحياء", "payload": 3},
-    {"content_type": "text", "title": "رياضيات", "payload": 4}
+        {"content_type": "text", "title": "كيمياء", "payload": 2},
+        {"content_type": "text", "title": "أحياء", "payload": 3},
+        {"content_type": "text", "title": "رياضيات", "payload": 4}
     ]
     return bot.send_quick_replies(rec_id, "من فضلك اختر مادة لتتابعها", quick_reply)
 
