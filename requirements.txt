@@ -8,7 +8,7 @@ flask>=1.0.0
 gunicorn==19.9.0
 idna==2.7
 itsdangerous==0.24
-Jinja2>=2.10.1
+Jinja2>=2.11.13
 markupsafe==1.0
 pymessenger==0.0.7.0
 python-dotenv==0.8.2
